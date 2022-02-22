@@ -2,15 +2,15 @@ import React from "react";
 // import "./styles.css";
 
 export const Item = ({ id, item, refetch }) => {
+  const removeTodoBaseUrl = process.env.BLOX_ENV_URL_removeTodo;
+  
   const handleDelete = (e) => {
     e.preventDefault();
     const idToRemove = e.target.value.trim();
-    fetch("http://localhost:3001/removeTodo", {
-      headers: {
-        "Content-Type": "application/json",
-      },
+
+    fetch(`${removeTodoBaseUrl}/removeTodo`, {
       method: "delete",
-      body: JSON.stringify({ data: { id: idToRemove } }),
+      body: JSON.stringify({ id: idToRemove }),
     })
       .then((res) => res.json())
       .then(({ status }) => {
