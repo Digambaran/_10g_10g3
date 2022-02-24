@@ -1,14 +1,14 @@
 import React from "react";
+import env from "env";
 // import "./styles.css";
 
 export const Item = ({ id, item, refetch }) => {
-  const removeTodoBaseUrl = process.env.BLOX_ENV_URL_removeTodo;
   
   const handleDelete = (e) => {
     e.preventDefault();
     const idToRemove = e.target.value.trim();
 
-    fetch(`${removeTodoBaseUrl}/removeTodo`, {
+    fetch(`${env.BLOX_FUNCTION_URL}/removeTodo`, {
       method: "delete",
       body: JSON.stringify({ id: idToRemove }),
     })
