@@ -1,8 +1,1 @@
-{
-  "type": "ui",
-  "source": "git@github.com:Appblox/_ab_todo_todoItem.git",
-  "language": "js",
-  "start": "npx webpack-dev-server",
-  "build": "npm run build",
-  "postPull": "npm i"
-}
+{"type":"ui","source":{"https":"https://github.com/Digambaran/_10g_10g3","ssh":"git@github.com:Digambaran/_10g_10g3.git"},"language":"js","start":"npx webpack-dev-server","build":"npm run build","postPull":"npm i","name":"10g3"}
